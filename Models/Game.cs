@@ -6,30 +6,35 @@ namespace VideoGameManager.Models
 {
     public class Game
     {
-        private const string TitleError = "You must input a title.",
-            GenreError = "You must input a genre.",
-            YearError = "Not a valid year.",
-            ScoreError = "The score must be between 0 and 10 (included).";
 
-        private int _id, _year;
-        private double _score;
-        private string _title, _genre, _description = string.Empty;
+        private const string TitleErrorMsg = "You must input a title";
+        private const string GenreErrorMsg = "You must input a genre";
+        private const string YearErrorMsg = "Not a valid year";
+        private const string ScoreErrorMsg = "Score must be between 0 and 10";
 
-        public int Id { get => _id; set => _id = value; }
+        [Key]
+        public int Id { get; set; }
 
-        [Required(ErrorMessage = TitleError)]
+        [Required(ErrorMessage = TitleErrorMsg)]
         [StringLength(100)]
-        public string Title { get => _title; set => _title = value; }
+        public string Title { get; set; } = string.Empty;
+        
+        [Required(ErrorMessage = GenreErrorMsg)]
+        public string Genre { get; set; } = string.Empty;
 
-        [Required(ErrorMessage = GenreError)]
-        public string Genre { get => _genre; set => _genre = value;  }
+        [Range(1970, 2030, ErrorMessage = YearErrorMsg)]
+        public int Year { get; set; }
 
-        [Range(1970, 2030, ErrorMessage = YearError)]
-        public int Year { get => _year; set => _year = value; }
+        [Range(0, 10, ErrorMessage = ScoreErrorMsg)]
+        public double Score { get; set; }
 
-        [Range(0, 10, ErrorMessage = ScoreError)]
-        public double Score { get => _score; set => _score = value; }
+        public string Description { get; set; } = string.Empty;
 
-        public string? Description { get => _description; set => _description = value; } 
+        // Clau forània cap a Developer
+        public int DeveloperId { get; set; }
+
+        // Propietat de navegació
+        public Developer? Developer { get; set; }
     }
+
 }
