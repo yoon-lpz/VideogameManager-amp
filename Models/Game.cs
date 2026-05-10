@@ -30,11 +30,11 @@ namespace VideoGameManager.Models
 
         public string Description { get; set; } = string.Empty;
 
-        // Clau forània cap a Developer
         public int DeveloperId { get; set; }
 
-        // Propietat de navegació
         public Developer? Developer { get; set; }
+
+        public string? Platform { get; set; }
     }
 
 }
