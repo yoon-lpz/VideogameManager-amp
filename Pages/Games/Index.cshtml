@@ -1,0 +1,57 @@
+﻿@page
+@model VideoGameManager.Pages.Games.IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+
+<div style="font-family: 'Segoe UI'; margin: 20px">
+    <div style="margin-bottom: 25px;">
+        <a asp-page="./Create" style="text-decoration: none; color: #88d8c0; font-size: 14px; font-weight: bold; border: 1px solid #88d8c0; padding: 8px 20px; border-radius: 20px; display: inline-block;">
+            Create a new game
+        </a>
+    </div>
+
+    <div style="box-shadow: 0 4px 15px #0000000D; border-radius: 8px; overflow: scroll; border: 1px solid #e0e0e0;">
+        <table style="border-collapse: collapse; width: 100%; background-color: white;">
+            <thead>
+                <tr style="background-color: #88d8c0; color: white;">
+                    <th style="padding: 18px 20px; text-align: left; font-weight: 600; font-size: 13.6px; letter-spacing: 1px;">Title</th>
+                    <th style="padding: 18px 20px; text-align: left; font-weight: 600; font-size: 13.6px; letter-spacing: 1px;">Genre</th>
+                    <th style="padding: 18px 20px; text-align: left; font-weight: 600; font-size: 13.6px; letter-spacing: 1px;">Year</th>
+                    <th style="padding: 18px 20px; text-align: left; font-weight: 600; font-size: 13.6px; letter-spacing: 1px;">Score</th>
+                    <th style="padding: 18px 20px; text-align: left; font-weight: 600; font-size: 13.6px; letter-spacing: 1px;">Description</th>
+                    <th style="padding: 18px 20px; width: 120px;"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var game in Model.Games)
+                {
+                    var rowColor = (Model.Games.IndexOf(game) % 2 == 0) ? "#ffffff" : "#f8fdfb";
+                    <tr style="background-color: @rowColor; border-bottom: 1px solid #eee; transition: background-color 0.3s;">
+                        <td style="padding: 15px 20px; font-weight: 500; color: #333;">@game.Title</td>
+                        <td style="padding: 15px 20px; color: #666;">
+                            <span style="background: #eaf7f3; color: #6bb39e; padding: 4px 10px; border-radius: 12px; font-size: 12.8px; font-weight: bold;">
+                                @game.Genre
+                            </span>
+                        </td>
+                        <td style="padding: 15px 20px; color: #777;">@game.Year</td>
+                        <td style="padding: 15px 20px;">
+                            <span style="font-weight: bold; color: #88d8c0;">@game.Score</span><span style="font-size: 12.8px; color: #ccc;">/10</span>
+                        </td>
+                        <td style="padding: 15px 20px; color: #888; font-size: 14.4px; max-width: 300px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                            @(string.IsNullOrWhiteSpace(game.Description) ? "No description" : game.Description)
+                        </td>
+                        <td style="padding: 15px 20px; text-align: right;">
+                            <a asp-page="./Details" asp-route-id="@game.Id"
+                                   style="text-decoration: none; color: #88d8c0; border: 1px solid #88d8c0; padding: 6px 12px; border-radius: 4px; font-size: 12.8px; font-weight: bold; display: inline-block;">
+                                DETAILS
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+

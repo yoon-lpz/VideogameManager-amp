@@ -1,0 +1,38 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using VideoGameManager.Models;
+using VideoGameManager.Services;
+
+namespace VideoGameManager.Pages.Games
+{
+    public class DeleteModel : PageModel
+    {
+        private readonly GameService _gameService;
+
+        public int EmptyStars, FilledStars;
+        public Game Game { get; set; }
+
+        public DeleteModel(GameService gameService)
+        {
+            _gameService = gameService;
+        }
+
+        public IActionResult OnGet(int id)
+        {
+            Game = _gameService.GetById(id);
+            if (Game == null)
+            {
+                return RedirectToPage("./Index");
+            }
+
+            FilledStars = (int)Game.Score / 2;
+            EmptyStars = 5 - FilledStars;
+            return Page();
+        }
+        public IActionResult OnPost(int id)
+        {
+            _gameService.Delete(id);
+            return RedirectToPage("./Index");
+        }
+    }
+}

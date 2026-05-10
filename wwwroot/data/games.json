@@ -1,0 +1,34 @@
+[
+  {
+    "Id": 1,
+    "Title": "Tomodachi Life: Living the Dream",
+    "Genre": "Simulation",
+    "Year": 2026,
+    "Score": 10,
+    "Description": "One of the best simulation games ever."
+  },
+  {
+    "Id": 2,
+    "Title": "Assassin\u0027s Creed IV: Black Flag",
+    "Genre": "Action",
+    "Year": 2013,
+    "Score": 9.2,
+    "Description": null
+  },
+  {
+    "Id": 3,
+    "Title": "Cars",
+    "Genre": "Races",
+    "Year": 2006,
+    "Score": 9,
+    "Description": null
+  },
+  {
+    "Id": 2,
+    "Title": "Animal Crossing: New Horizons",
+    "Genre": "Simulation",
+    "Year": 2020,
+    "Score": 9.6,
+    "Description": null
+  }
+]

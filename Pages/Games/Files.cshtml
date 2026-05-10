@@ -1,0 +1,52 @@
+﻿@page
+@model VideoGameManager.Pages.Games.FilesModel
+@{
+	ViewData["Title"] = "Files";
+}
+
+<div style="font-family: 'Segoe UI'; max-width: 600px; margin: 30px auto">
+    <div style="display: flex; gap: 15px; margin-bottom: 25px;">
+        <form method="post" asp-page-handler="ExportJson">
+            <button style="color: #88d8c0; font-size: 14px; font-weight: bold; border: 1px solid #88d8c0; padding: 8px 20px; border-radius: 20px; display: inline-block; background-color: white">Export JSON</button>
+        </form>
+        <form method="post" asp-page-handler="ImportJson">
+            <button style="color: #88d8c0; font-size: 14px; font-weight: bold; border: 1px solid #88d8c0; padding: 8px 20px; border-radius: 20px; display: inline-block; background-color: white">Import JSON</button>
+        </form>
+        <form method="post" asp-page-handler="ExportCsv">
+            <button style="color: #88d8c0; font-size: 14px; font-weight: bold; border: 1px solid #88d8c0; padding: 8px 20px; border-radius: 20px; display: inline-block; background-color: white">Export CSV</button>
+        </form>
+        <form method="post" asp-page-handler="ImportCsv">
+            <button style="color: #88d8c0; font-size: 14px; font-weight: bold; border: 1px solid #88d8c0; padding: 8px 20px; border-radius: 20px; display: inline-block; background-color: white">Import CSV</button>
+        </form>
+        <form method="post" asp-page-handler="GenerateXml">
+            <button style="color: #88d8c0; font-size: 14px; font-weight: bold; border: 1px solid #88d8c0; padding: 8px 20px; border-radius: 20px; display: inline-block; background-color: white">Generate ranking</button>
+        </form>
+    </div>
+
+    <div style="border: 2px solid #88d8c0; border-radius: 8px; background-color: white;">
+
+        <div style="background-color: #88d8c0; padding: 10px 20px; display: flex; align-items: center; justify-content: center;">
+            <span style="color: white; font-weight: bold; font-size: 16px; letter-spacing: 4px;">
+                ACTIVITY LOG
+            </span>
+        </div>
+
+        <div style="padding: 20px;">
+            @if (Model.Log != null && Model.Log.Any())
+            {
+                @foreach (var line in Model.Log)
+                {
+                    <p style="padding: 12px 15px; margin: 0; font-size: 15px; color: #555; line-height: 1.4;">
+                        @line
+                    </p>
+                }
+            }
+            else
+            {
+                <p style="padding: 20px; text-align: center; color: #999; font-style: italic; font-size: 15px;">
+                    No activity recorded.
+                </p>
+            }
+        </div>
+    </div>
+</div>

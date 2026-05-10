@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AppConfig>
+  <AppTitle>Videogame Ranking</AppTitle>
+  <Games>
+    <Game>
+      <id>1</id>
+      <score>10</score>
+      <title>Tomodachi Life: Living the Dream</title>
+      <genre>Simulation</genre>
+      <year>2026</year>
+    </Game>
+    <Game>
+      <id>2</id>
+      <score>9.6</score>
+      <title>Animal Crossing: New Horizons</title>
+      <genre>Simulation</genre>
+      <year>2020</year>
+    </Game>
+    <Game>
+      <id>2</id>
+      <score>9.2</score>
+      <title>Assassin's Creed IV: Black Flag</title>
+      <genre>Action</genre>
+      <year>2013</year>
+    </Game>
+    <Game>
+      <id>3</id>
+      <score>9</score>
+      <title>Cars</title>
+      <genre>Races</genre>
+      <year>2006</year>
+    </Game>
+  </Games>
+</AppConfig>
