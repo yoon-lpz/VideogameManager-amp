@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\gasai\\Desktop\\DAMv\\Programaci\u00F3\\VideoGameManager2\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{CAC378B3-E587-25FE-4D04-F3F78F6AB66D}|VideoGameManager.csproj|c:\\users\\gasai\\desktop\\damv\\programaci\u00F3\\videogamemanager2\\pages\\games\\delete.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CAC378B3-E587-25FE-4D04-F3F78F6AB66D}|VideoGameManager.csproj|solutionrelative:pages\\games\\delete.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CAC378B3-E587-25FE-4D04-F3F78F6AB66D}|VideoGameManager.csproj|c:\\users\\gasai\\desktop\\damv\\programaci\u00F3\\videogamemanager2\\pages\\games\\details.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CAC378B3-E587-25FE-4D04-F3F78F6AB66D}|VideoGameManager.csproj|solutionrelative:pages\\games\\details.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CAC378B3-E587-25FE-4D04-F3F78F6AB66D}|VideoGameManager.csproj|c:\\users\\gasai\\desktop\\damv\\programaci\u00F3\\videogamemanager2\\pages\\games\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CAC378B3-E587-25FE-4D04-F3F78F6AB66D}|VideoGameManager.csproj|solutionrelative:pages\\games\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{CAC378B3-E587-25FE-4D04-F3F78F6AB66D}|VideoGameManager.csproj|c:\\users\\gasai\\desktop\\damv\\programaci\u00F3\\videogamemanager2\\pages\\games\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CAC378B3-E587-25FE-4D04-F3F78F6AB66D}|VideoGameManager.csproj|solutionrelative:pages\\games\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,32 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Details.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\gasai\\Desktop\\DAMv\\Programaci\u00F3\\VideoGameManager2\\Pages\\Games\\Details.cshtml.cs",
               "RelativeDocumentMoniker": "Pages\\Games\\Details.cshtml.cs",
               "ToolTip": "C:\\Users\\gasai\\Desktop\\DAMv\\Programaci\u00F3\\VideoGameManager2\\Pages\\Games\\Details.cshtml.cs",
               "RelativeToolTip": "Pages\\Games\\Details.cshtml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAkwBwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwCEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-10T22:42:02.519Z",
+              "WhenOpened": "2026-05-10T22:55:21.895Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\gasai\\Desktop\\DAMv\\Programaci\u00F3\\VideoGameManager2\\Pages\\Games\\Details.cshtml",
-              "RelativeDocumentMoniker": "Pages\\Games\\Details.cshtml",
-              "ToolTip": "C:\\Users\\gasai\\Desktop\\DAMv\\Programaci\u00F3\\VideoGameManager2\\Pages\\Games\\Details.cshtml",
-              "RelativeToolTip": "Pages\\Games\\Details.cshtml",
-              "ViewState": "AgIAADUAAAAAAAAAAAAcwEsAAAAGAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Delete.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\gasai\\Desktop\\DAMv\\Programaci\u00F3\\VideoGameManager2\\Pages\\Games\\Delete.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Games\\Delete.cshtml.cs",
+              "ToolTip": "C:\\Users\\gasai\\Desktop\\DAMv\\Programaci\u00F3\\VideoGameManager2\\Pages\\Games\\Delete.cshtml.cs",
+              "RelativeToolTip": "Pages\\Games\\Delete.cshtml.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAswBwAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-10T22:47:49.774Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\gasai\\Desktop\\DAMv\\Programaci\u00F3\\VideoGameManager2\\Pages\\Games\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Games\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\gasai\\Desktop\\DAMv\\Programaci\u00F3\\VideoGameManager2\\Pages\\Games\\Delete.cshtml",
+              "RelativeToolTip": "Pages\\Games\\Delete.cshtml",
+              "ViewState": "AgIAADQAAAAAAAAAAAAgwEsAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-10T22:41:24.351Z",
+              "WhenOpened": "2026-05-10T22:47:46.438Z",
               "EditorCaption": ""
             }
           ]
