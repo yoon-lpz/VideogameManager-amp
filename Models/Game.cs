@@ -28,7 +28,7 @@ namespace VideoGameManager.Models
         [Range(0, 10, ErrorMessage = ScoreErrorMsg)]
         public double Score { get; set; }
 
-        public string Description { get; set; } = string.Empty;
+        public string? Description { get; set; } = string.Empty;
 
         public int DeveloperId { get; set; }
 
