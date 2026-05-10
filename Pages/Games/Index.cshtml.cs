@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.EntityFrameworkCore;
 using VideoGameManager.Data;
 using VideoGameManager.Models;
 using VideoGameManager.Services;
@@ -16,9 +17,8 @@ namespace VideoGameManager.Pages.Games
             _context = context;
         }
 
-        public void OnGet()
+        public async Task OnGet()
         {
-            Games = _context.Games.ToList();
             if (!_context.Developers.Any())
             {
                 var dev1 = new Developer { Name = "Nintendo", Country = "Japan", FoundedYear = 1889 };
@@ -55,6 +55,7 @@ namespace VideoGameManager.Pages.Games
                 _context.SaveChanges();
             }
 
+            Games = await _context.Games.Include(g => g.Developer).ToListAsync();
         }
     }
 }
