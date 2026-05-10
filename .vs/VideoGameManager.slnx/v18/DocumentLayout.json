@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\gasai\\Desktop\\DAMv\\Programaci\u00F3\\VideoGameManager2\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{CAC378B3-E587-25FE-4D04-F3F78F6AB66D}|VideoGameManager.csproj|c:\\users\\gasai\\desktop\\damv\\programaci\u00F3\\videogamemanager2\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{CAC378B3-E587-25FE-4D04-F3F78F6AB66D}|VideoGameManager.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CAC378B3-E587-25FE-4D04-F3F78F6AB66D}|VideoGameManager.csproj|c:\\users\\gasai\\desktop\\damv\\programaci\u00F3\\videogamemanager2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CAC378B3-E587-25FE-4D04-F3F78F6AB66D}|VideoGameManager.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CAC378B3-E587-25FE-4D04-F3F78F6AB66D}|VideoGameManager.csproj|c:\\users\\gasai\\desktop\\damv\\programaci\u00F3\\videogamemanager2\\data\\gamestorecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CAC378B3-E587-25FE-4D04-F3F78F6AB66D}|VideoGameManager.csproj|solutionrelative:data\\gamestorecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CAC378B3-E587-25FE-4D04-F3F78F6AB66D}|VideoGameManager.csproj|c:\\users\\gasai\\desktop\\damv\\programaci\u00F3\\videogamemanager2\\models\\developer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CAC378B3-E587-25FE-4D04-F3F78F6AB66D}|VideoGameManager.csproj|solutionrelative:models\\developer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CAC378B3-E587-25FE-4D04-F3F78F6AB66D}|VideoGameManager.csproj|c:\\users\\gasai\\desktop\\damv\\programaci\u00F3\\videogamemanager2\\models\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,19 +26,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\gasai\\Desktop\\DAMv\\Programaci\u00F3\\VideoGameManager2\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\gasai\\Desktop\\DAMv\\Programaci\u00F3\\VideoGameManager2\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-10T21:27:16.649Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "GameStoreContext.cs",
               "DocumentMoniker": "C:\\Users\\gasai\\Desktop\\DAMv\\Programaci\u00F3\\VideoGameManager2\\Data\\GameStoreContext.cs",
               "RelativeDocumentMoniker": "Data\\GameStoreContext.cs",
               "ToolTip": "C:\\Users\\gasai\\Desktop\\DAMv\\Programaci\u00F3\\VideoGameManager2\\Data\\GameStoreContext.cs",
               "RelativeToolTip": "Data\\GameStoreContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-10T21:17:25.228Z",
+              "WhenOpened": "2026-05-10T21:26:32.63Z",
               "EditorCaption": ""
             },
             {
@@ -56,26 +69,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Developer.cs",
-              "DocumentMoniker": "C:\\Users\\gasai\\Desktop\\DAMv\\Programaci\u00F3\\VideoGameManager2\\Models\\Developer.cs",
-              "RelativeDocumentMoniker": "Models\\Developer.cs",
-              "ToolTip": "C:\\Users\\gasai\\Desktop\\DAMv\\Programaci\u00F3\\VideoGameManager2\\Models\\Developer.cs",
-              "RelativeToolTip": "Models\\Developer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-10T21:04:39.008Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\gasai\\Desktop\\DAMv\\Programaci\u00F3\\VideoGameManager2\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\gasai\\Desktop\\DAMv\\Programaci\u00F3\\VideoGameManager2\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAcwBwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-03T17:55:10.845Z",
               "EditorCaption": ""
