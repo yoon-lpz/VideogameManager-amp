@@ -1,7 +1,7 @@
 ﻿@page
 @model VideoGameManager.Pages.Games.IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Games";
 }
 
 
@@ -17,6 +17,7 @@
             <thead>
                 <tr style="background-color: #88d8c0; color: white;">
                     <th style="padding: 18px 20px; text-align: left; font-weight: 600; font-size: 13.6px; letter-spacing: 1px;">Title</th>
+                    <th style="padding: 18px 20px; text-align: left; font-weight: 600; font-size: 13.6px; letter-spacing: 1px;">Developer</th>
                     <th style="padding: 18px 20px; text-align: left; font-weight: 600; font-size: 13.6px; letter-spacing: 1px;">Genre</th>
                     <th style="padding: 18px 20px; text-align: left; font-weight: 600; font-size: 13.6px; letter-spacing: 1px;">Year</th>
                     <th style="padding: 18px 20px; text-align: left; font-weight: 600; font-size: 13.6px; letter-spacing: 1px;">Score</th>
@@ -30,6 +31,7 @@
                     var rowColor = (Model.Games.IndexOf(game) % 2 == 0) ? "#ffffff" : "#f8fdfb";
                     <tr style="background-color: @rowColor; border-bottom: 1px solid #eee; transition: background-color 0.3s;">
                         <td style="padding: 15px 20px; font-weight: 500; color: #333;">@game.Title</td>
+                        <td style="padding: 15px 20px; color: #777;">@game.Developer.Name</td>
                         <td style="padding: 15px 20px; color: #666;">
                             <span style="background: #eaf7f3; color: #6bb39e; padding: 4px 10px; border-radius: 12px; font-size: 12.8px; font-weight: bold;">
                                 @game.Genre

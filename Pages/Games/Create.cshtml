@@ -1,7 +1,7 @@
 ﻿@page
 @model VideoGameManager.Pages.Games.CreateModel
 @{
-	ViewData["Title"] = "Create new game";
+    ViewData["Title"] = "Create New Game";
 }
 
 <div style="font-family: 'Segoe UI'; max-width: 600px; margin: 30px auto; border: 2px solid #88d8c0; border-radius: 8px; background-color: white;">
@@ -15,6 +15,7 @@
     <form method="post" style="padding: 25px;">
         <div asp-validation-summary="ModelOnly" style="color: #e74c3c; margin-bottom: 15px; font-size: 15px;"></div>
 
+
         <div style="margin-bottom: 20px;">
             <label asp-for="Game.Title" style="display: block; font-weight: bold; color: #88d8c0; margin-bottom: 8px; font-size: 15px;">Title</label>
             <input asp-for="Game.Title" type="text" style="width: 100%; padding: 10px; border: 1px solid #eee; border-radius: 4px; box-sizing: border-box; font-size: 15px; outline-color: #88d8c0;" />
@@ -22,16 +23,26 @@
         </div>
 
         <div style="display: flex; gap: 20px; margin-bottom: 20px;">
+
             <div style="flex: 1;">
                 <label asp-for="Game.Genre" style="display: block; font-weight: bold; color: #88d8c0; margin-bottom: 8px; font-size: 15px;">Genre</label>
                 <input asp-for="Game.Genre" type="text" style="width: 100%; padding: 10px; border: 1px solid #eee; border-radius: 4px; box-sizing: border-box; font-size: 15px; outline-color: #88d8c0;" />
                 <span asp-validation-for="Game.Genre" style="color: #e74c3c; font-size: 12px;"></span>
             </div>
+
             <div style="flex: 1;">
                 <label asp-for="Game.Year" style="display: block; font-weight: bold; color: #88d8c0; margin-bottom: 8px; font-size: 15px;">Year</label>
                 <input asp-for="Game.Year" type="number" style="width: 100%; padding: 10px; border: 1px solid #eee; border-radius: 4px; box-sizing: border-box; font-size: 15px; outline-color: #88d8c0;" />
                 <span asp-validation-for="Game.Year" style="color: #e74c3c; font-size: 12px;"></span>
             </div>
+        </div>
+
+        <div style="margin-bottom: 20px;">
+            <label asp-for="Game.DeveloperId" style="display: block; font-weight: bold; color: #88d8c0; margin-bottom: 8px; font-size: 15px;">Developer</label>
+            <select asp-for="Game.DeveloperId" asp-items="Model.DeveloperList" style="width: 100%; padding: 10px; border: 1px solid #eee; border-radius: 4px; box-sizing: border-box; font-size: 15px; outline-color: #88d8c0; background-color: white;">
+                <option value="">-- Select Developer --</option>
+            </select>
+            <span asp-validation-for="Game.DeveloperId" style="color: #e74c3c; font-size: 12px;"></span>
         </div>
 
         <div style="margin-bottom: 20px;">
@@ -41,7 +52,7 @@
 
         <div style="background-color: #f4fbf9; padding: 15px; border-radius: 4px; margin-bottom: 25px;">
             <label asp-for="Game.Score" style="display: block; font-weight: bold; color: #555; margin-bottom: 8px; font-size: 15px;">Score (1-10)</label>
-            <input asp-for="Game.Score" type="number" step="any" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; font-size: 15px; outline-color: #88d8c0;" />
+            <input asp-for="Game.Score" type="number" step="0.1" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; font-size: 15px; outline-color: #88d8c0;" />
             <span asp-validation-for="Game.Score" style="color: #e74c3c; font-size: 12px;"></span>
         </div>
 

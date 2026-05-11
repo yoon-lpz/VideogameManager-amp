@@ -4,8 +4,14 @@ using VideoGameManager.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+
 builder.Services.AddRazorPages();
+
+builder.Services.AddSingleton<GameRepository>();
+builder.Services.AddSingleton<GameService>();
+builder.Services.AddSingleton<GamesExporter>();
+builder.Services.AddSingleton<GamesRanking>();
+
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<GameStoreContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
@@ -22,6 +28,16 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
 app.UseAuthorization();
+
+app.MapGet("/", context =>
+{
+    context.Response.Redirect("/Games/Index");
+    return Task.CompletedTask;
+});
+
+app.MapStaticAssets();
+app.MapRazorPages()
+   .WithStaticAssets();
 
 app.MapControllerRoute(
     name: "default",

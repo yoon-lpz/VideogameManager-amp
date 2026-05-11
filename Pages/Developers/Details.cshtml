@@ -1,0 +1,65 @@
+﻿@page "{id:int}"
+@model VideoGameManager.Pages.Developers.DetailsModel
+@{
+    ViewData["Title"] = Model.Developer?.Name ?? "Details";
+}
+
+<div style="font-family: 'Segoe UI'; max-width: 600px; margin: 30px auto">
+
+    <div style="border: 2px solid #88d8c0; border-radius: 8px; overflow: hidden; background-color: white;">
+        <div style="background-color: #88d8c0; padding: 10px 20px; display: flex; align-items: center; justify-content: center;">
+            <span style="color: white; font-weight: bold; font-size: 16px; letter-spacing: 4px">
+                DETAILS
+            </span>
+        </div>
+
+        <div style="padding: 25px;">
+            <h1 style="margin: 0 0 20px 0; color: #444; border-bottom: 1px solid #eee; padding-bottom: 10px; font-size: 32px;">
+                @Model.Developer?.Name
+            </h1>
+
+            <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
+                <tr>
+                    <td style="padding: 8px 0; color: #88d8c0; font-weight: bold; width: 30%; font-size: 15px;">Country</td>
+                    <td style="padding: 8px 0; font-size: 15px;">@Model.Developer?.Country</td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px 0; color: #88d8c0; font-weight: bold; font-size: 15px;">Foundation year</td>
+                    <td style="padding: 8px 0; font-size: 15px;">@Model.Developer?.FoundedYear</td>
+                </tr>
+            </table>
+
+            <div style="margin-top: 30px;">
+                <h3 style="color: #444; font-size: 18px; border-bottom: 2px solid #88d8c0; display: inline-block; padding-bottom: 5px; margin-bottom: 15px;">
+                    Games Library
+                </h3>
+                
+                @if (Model.Developer?.Games != null && Model.Developer.Games.Any())
+                {
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        @foreach (var game in Model.Developer.Games)
+                        {
+                            <li style="padding: 10px; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center;">
+                                <span style="font-weight: 500; color: #555;">@game.Title</span>
+                                <span style="font-size: 12px; color: #999; background: #f9f9f9; padding: 2px 10px; border-radius: 10px;">@game.Genre</span>
+                            </li>
+                        }
+                    </ul>
+                }
+                else
+                {
+                    <p style="color: #999; font-style: italic; font-size: 14px;">No games registered for this developer.</p>
+                }
+            </div>
+            <div style="margin-top: 35px; text-align: center; display: flex; gap: 10px; justify-content: center;">
+                <a asp-page="./Index" style="text-decoration: none; color: #88d8c0; font-size: 14px; border: 1px solid #88d8c0; padding: 8px 20px; border-radius: 20px; font-weight: bold;">
+                    Return to list
+                </a>
+
+                <a asp-page="./Delete" asp-route-id="@Model.Developer?.Id" style="text-decoration: none; color: #e74c3c; font-size: 14px; border: 1px solid #e74c3c; padding: 8px 20px; border-radius: 20px; font-weight: bold;">
+                    Delete developer
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

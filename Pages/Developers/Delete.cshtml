@@ -1,0 +1,70 @@
+﻿@page "{id:int}"
+@model VideoGameManager.Pages.Developers.DeleteModel
+@{
+    ViewData["Title"] = $"Delete {Model.Developer?.Name}";
+    bool hasGames = Model.Developer?.Games != null && Model.Developer.Games.Any();
+}
+
+<div style="font-family: 'Segoe UI'; max-width: 600px; margin: 30px auto">
+    <div style="border: 2px solid #e74c3c; border-radius: 8px; background-color: white;">
+        <div style="background-color: #e74c3c; padding: 10px 20px; display: flex; align-items: center; justify-content: center;">
+            <span style="color: white; font-weight: bold; font-size: 16px; letter-spacing: 4px;">
+                DELETE
+            </span>
+        </div>
+
+        <div style="padding: 25px;">
+            <h1 style="margin: 0 0 20px 0; color: #444; border-bottom: 1px solid #eee; padding-bottom: 10px; font-size: 32px;">
+                @Model.Developer?.Name
+            </h1>
+
+            @if (hasGames)
+            {
+                <div style="background-color: #fdf2f2; border-left: 4px solid #e74c3c; padding: 15px; margin-bottom: 20px;">
+                    <p style="color: #c0392b; margin: 0; font-size: 14px; font-weight: bold;">
+                        Cannot delete this developer.
+                    </p>
+                    <p style="color: #444; margin: 5px 0 0 0; font-size: 13px;">
+                        This developer is still linked to <strong>@Model.Developer.Games.Count()</strong> games.
+                        Please delete or reassign the games first.
+                    </p>
+                </div>
+            }
+
+            <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
+                <tr>
+                    <td style="padding: 8px 0; color: #e74c3c; font-weight: bold; width: 30%; font-size: 15px;">Country</td>
+                    <td style="padding: 8px 0; font-size: 15px;">@Model.Developer?.Country</td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px 0; color: #e74c3c; font-weight: bold; font-size: 15px;">Foundation year</td>
+                    <td style="padding: 8px 0; font-size: 15px;">@Model.Developer?.FoundedYear</td>
+                </tr>
+            </table>
+
+            <div style="margin-top: 25px; text-align: center;">
+                <form method="post">
+                    <input type="hidden" asp-for="Developer.Id" />
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 10px;">
+                        <a asp-page="./Details" asp-route-id="@Model.Developer?.Id" style="text-decoration: none; color: #88d8c0; font-size: 14px; border: 1px solid #88d8c0; padding: 8px 20px; border-radius: 20px; font-weight: bold; display: inline-block;">
+                            Cancel
+                        </a>
+
+                        @if (hasGames)
+                        {
+                            <button type="button" disabled style="background-color: #ccc; color: white; border: 1px solid #ccc; padding: 8px 25px; border-radius: 20px; font-weight: bold; font-size: 14px; cursor: not-allowed;">
+                                Confirm Delete
+                            </button>
+                        }
+                        else
+                        {
+                            <button type="submit" style="background-color: #e74c3c; color: white; border: 1px solid #e74c3c; padding: 8px 25px; border-radius: 20px; font-weight: bold; font-size: 14px; cursor: pointer;">
+                                Confirm Delete
+                            </button>
+                        }
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
