@@ -67,4 +67,105 @@
             </div>
         </div>
     </div>
+
+    <div style="border: 2px solid #88d8c0; border-radius: 8px; background: white; overflow: hidden; margin-bottom: 30px;">
+        <div style="background: #88d8c0; color: white; padding: 10px; font-weight: bold; text-align: center;">
+            DEVELOPER PERFORMANCE (AVG SCORE)
+        </div>
+        <div style="padding: 15px;">
+            <table style="width: 100%; border-collapse: collapse;">
+                <thead>
+                    <tr style="border-bottom: 2px solid #eee; text-align: left; color: #666;">
+                        <th style="padding: 10px;">Developer</th>
+                        <th style="padding: 10px; text-align: center;">Games</th>
+                        <th style="padding: 10px; text-align: right;">Average Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var dev in Model.AvgPerDev)
+                    {
+                        <tr style="border-bottom: 1px solid #f9f9f9;">
+                            <td style="padding: 10px; font-weight: bold;">@dev.Name</td>
+                            <td style="padding: 10px; text-align: center; color: #999;">@dev.GameCount</td>
+                            <td style="padding: 10px; text-align: right; color: #88d8c0; font-weight: bold;">
+                                @dev.AvgScore.ToString("F2")
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div style="border: 2px solid #88d8c0; border-radius: 8px; background: white; overflow: hidden; margin-bottom: 30px;">
+        <div style="background: #88d8c0; color: white; padding: 15px; display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-weight: bold;">PRODUCTIVE DEVELOPERS</span>
+            <form method="get" style="display: flex; align-items: center; gap: 10px;">
+                <label style="font-size: 0.8em;">Min. games:</label>
+                <input type="number" asp-for="Threshold" min="0"
+                       style="width: 60px; border-radius: 4px; border: none; padding: 2px 5px;"
+                       onchange="this.form.submit()" />
+            </form>
+        </div>
+        <div style="padding: 15px;">
+            <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                @foreach (var dev in Model.ProductiveDevs)
+                {
+                    <div style="background: #f0fdf9; border: 1px solid #88d8c0; padding: 8px 15px; border-radius: 20px; display: flex; align-items: center; gap: 8px;">
+                        <span style="font-weight: bold; color: #444;">@dev.Name</span>
+                        <span style="background: #88d8c0; color: white; border-radius: 50%; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; font-size: 0.8em; font-weight: bold;">
+                            @dev.Games.Count
+                        </span>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+
+    <div style="border: 2px solid #88d8c0; border-radius: 8px; background: white; overflow: hidden;">
+        <div style="background: #88d8c0; padding: 15px;">
+            <form method="get" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; align-items: flex-end;">
+                <div>
+                    <label style="font-weight: bold; color: white; display: block; margin-bottom: 5px;">Title:</label>
+                    <input type="text" asp-for="TitleFilter" placeholder="Search..."
+                           style="width: 100%; padding: 8px; border-radius: 20px; border: none; outline: none;" />
+                </div>
+                <div>
+                    <label style="font-weight: bold; color: white; display: block; margin-bottom: 5px;">Genre:</label>
+                    <select asp-for="SelectedGenre" asp-items="Model.Genres"
+                            style="width: 100%; padding: 8px; border-radius: 20px; border: none; outline: none;">
+                        <option value="">All Genres</option>
+                    </select>
+                </div>
+                <div>
+                    <label style="font-weight: bold; color: white; display: block; margin-bottom: 5px;">Since Year:</label>
+                    <input type="number" asp-for="MinYear" placeholder="Year"
+                           style="width: 100%; padding: 8px; border-radius: 20px; border: none; outline: none;" />
+                </div>
+                <div style="display: flex; gap: 10px;">
+                    <button type="submit" style="background: #444; color: white; border: none; padding: 8px 15px; border-radius: 20px; cursor: pointer; flex-grow: 1;">
+                        Filter
+                    </button>
+                    <a href="/Stats/Index" style="background: white; color: #444; text-decoration: none; padding: 8px 15px; border-radius: 20px; text-align: center;">Clear</a>
+                </div>
+            </form>
+        </div>
+
+        <div style="padding: 20px;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 15px;">
+                @foreach (var game in Model.FilteredByNameGames)
+                {
+                    <div style="padding: 15px; border: 1px solid #eee; border-radius: 8px; text-align: center;">
+                        <div style="font-weight: bold; color: #444;">@game.Title</div>
+                        <div style="color: #999; font-size: 12px;">@game.Genre | @game.Year</div>
+                        <div style="color: #88d8c0; font-size: 14px; margin-top: 5px; font-weight: bold;">★ @game.Score</div>
+                    </div>
+                }
+            </div>
+            @if (!Model.FilteredByNameGames.Any())
+            {
+                <p style="text-align: center; color: #999;">No games match your search criteria.</p>
+            }
+        </div>
+    </div>
 </div>

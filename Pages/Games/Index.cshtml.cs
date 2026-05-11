@@ -12,10 +12,7 @@ namespace VideoGameManager.Pages.Games
         private readonly GameStoreContext _context;
         public List<Game> Games { get; set; } = new();
 
-        public IndexModel(GameStoreContext context)
-        {
-            _context = context;
-        }
+        public IndexModel(GameStoreContext context) => _context = context;
 
         public async Task OnGet()
         {

@@ -12,7 +12,6 @@ namespace VideoGameManager.Pages.Games
         private readonly GameStoreContext _context;
         public Game Game { get; set; }
 
-
         public DetailsModel(GameStoreContext context) => _context = context;
 
         public async Task<IActionResult> OnGetAsync(int id)
