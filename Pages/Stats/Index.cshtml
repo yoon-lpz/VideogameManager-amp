@@ -1,0 +1,70 @@
+﻿@page
+@model VideoGameManager.Pages.Stats.IndexModel
+@{
+    ViewData["Title"] = "Stats";
+}
+
+<div style="font-family: 'Segoe UI'; max-width: 900px; margin: 30px auto">
+    <h1 style="color: #444; border-bottom: 3px solid #88d8c0; padding-bottom: 10px; margin-bottom: 30px;">
+        Quick Insights
+    </h1>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 30px;">
+        
+        <div style="border: 2px solid #88d8c0; border-radius: 8px; background: white; overflow: hidden;">
+            <div style="background: #88d8c0; color: white; padding: 10px; font-weight: bold; text-align: center;">TOP 5 RATED</div>
+            <div style="padding: 15px;">
+                @foreach (var game in Model.Top5Games)
+                {
+                    <div style="display: flex; justify-content: space-between; border-bottom: 1px solid #eee; padding: 8px 0;">
+                        <span><strong>@game.Title</strong> <small style="color:#999">(@game.Developer?.Name)</small></span>
+                        <span style="color: #88d8c0; font-weight: bold;">@game.Score</span>
+                    </div>
+                }
+            </div>
+        </div>
+
+        <div style="border: 2px solid #88d8c0; border-radius: 8px; background: white; overflow: hidden;">
+            <div style="background: #88d8c0; color: white; padding: 10px; font-weight: bold; text-align: center;">BY DECADE</div>
+            <div style="padding: 15px;">
+                @foreach (var item in Model.GamesByDecade)
+                {
+                    var percentage = Model.AllGames.Count > 0
+                         ? (item.Count * 100.0 / Model.AllGames.Count).ToString("0", System.Globalization.CultureInfo.InvariantCulture)
+                         : "0";
+                    <div style="display: flex; align-items: center; margin-bottom: 12px;">
+                        <span style="width: 60px; font-weight: bold;">@item.Decade's</span>
+                        <div style="flex-grow: 1; background: #f0f0f0; height: 12px; border-radius: 6px; margin: 0 10px;">
+                            <div style="background: #88d8c0; width: @(percentage)%; height: 100%; border-radius: 6px;"></div>
+                        </div>
+                        <span style="font-weight: bold;">@item.Count (@percentage%)</span>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+
+    <div style="border: 2px solid #88d8c0; border-radius: 8px; background: white; overflow: hidden;">
+        <div style="background: #88d8c0; padding: 15px; border-bottom: 1px solid #88d8c0;">
+            <form method="get" style="display: flex; align-items: center; gap: 15px;">
+                <label style="font-weight: bold; color: white;">Browse by Genre:</label>
+                <select asp-for="SelectedGenre" asp-items="Model.Genres" onchange="this.form.submit()"
+                        style="padding: 8px 15px; border-radius: 20px; border: 1px solid #88d8c0; outline: none;">
+                    <option value="">View All</option>
+                </select>
+            </form>
+        </div>
+
+        <div style="padding: 20px;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 15px;">
+                @foreach (var game in Model.FilteredGames)
+                {
+                    <div style="padding: 15px; border: 1px solid #eee; border-radius: 8px; text-align: center;">
+                        <div style="font-weight: bold; color: #444;">@game.Title</div>
+                        <div style="color: #88d8c0; font-size: 14px; margin-top: 5px;">★ @game.Score</div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
