@@ -1,7 +1,6 @@
 ﻿@page "{id:int}"
 @model VideoGameManager.Pages.Games.DetailsModel
 @{
-    // Navegación segura para evitar errores si el objeto aún no cargó
     ViewData["Title"] = Model.Game?.Title ?? "Details";
 }
 

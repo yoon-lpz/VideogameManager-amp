@@ -4,27 +4,22 @@ using Microsoft.EntityFrameworkCore;
 using VideoGameManager.Data;
 using VideoGameManager.Models;
 
-namespace VideoGameManager.Pages.Games
+namespace VideoGameManager.Pages.Developers
 {
     public class DetailsModel : PageModel
     {
-        public int EmptyStars, FilledStars;
         private readonly GameStoreContext _context;
-        public Game Game { get; set; }
-
+        public Developer Developer { get; set; }
 
         public DetailsModel(GameStoreContext context) => _context = context;
 
         public async Task<IActionResult> OnGetAsync(int id)
         {
-            Game = await _context.Games
-                .Include(g => g.Developer)
+            Developer = await _context.Developers
+                .Include(d => d.Games)
                 .FirstOrDefaultAsync(m => m.Id == id);
 
-            if (Game == null) return NotFound();
-
-            FilledStars = (int)(Game.Score / 2);
-            EmptyStars = 5 - FilledStars;
+            if (Developer == null) return NotFound();
 
             return Page();
         }

@@ -1,26 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\isard\\Desktop\\myRepo\\VideogameManager-amp\\",
+  "WorkspaceRootPath": "C:\\Users\\gasai\\Desktop\\DAMv\\Programaci\u00F3\\VideogameManager-amp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CAC378B3-E587-25FE-4D04-F3F78F6AB66D}|VideoGameManager.csproj|c:\\users\\isard\\desktop\\myrepo\\videogamemanager-amp\\pages\\developers\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CAC378B3-E587-25FE-4D04-F3F78F6AB66D}|VideoGameManager.csproj|solutionrelative:pages\\developers\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{CAC378B3-E587-25FE-4D04-F3F78F6AB66D}|VideoGameManager.csproj|c:\\users\\gasai\\desktop\\damv\\programaci\u00F3\\videogamemanager-amp\\pages\\developers\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CAC378B3-E587-25FE-4D04-F3F78F6AB66D}|VideoGameManager.csproj|solutionrelative:pages\\developers\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CAC378B3-E587-25FE-4D04-F3F78F6AB66D}|VideoGameManager.csproj|c:\\users\\isard\\desktop\\myrepo\\videogamemanager-amp\\pages\\games\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CAC378B3-E587-25FE-4D04-F3F78F6AB66D}|VideoGameManager.csproj|solutionrelative:pages\\games\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CAC378B3-E587-25FE-4D04-F3F78F6AB66D}|VideoGameManager.csproj|c:\\users\\isard\\desktop\\myrepo\\videogamemanager-amp\\pages\\developers\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CAC378B3-E587-25FE-4D04-F3F78F6AB66D}|VideoGameManager.csproj|solutionrelative:pages\\developers\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CAC378B3-E587-25FE-4D04-F3F78F6AB66D}|VideoGameManager.csproj|c:\\users\\isard\\desktop\\myrepo\\videogamemanager-amp\\pages\\games\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CAC378B3-E587-25FE-4D04-F3F78F6AB66D}|VideoGameManager.csproj|solutionrelative:pages\\games\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CAC378B3-E587-25FE-4D04-F3F78F6AB66D}|VideoGameManager.csproj|c:\\users\\isard\\desktop\\myrepo\\videogamemanager-amp\\models\\developer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CAC378B3-E587-25FE-4D04-F3F78F6AB66D}|VideoGameManager.csproj|solutionrelative:models\\developer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CAC378B3-E587-25FE-4D04-F3F78F6AB66D}|VideoGameManager.csproj|c:\\users\\gasai\\desktop\\damv\\programaci\u00F3\\videogamemanager-amp\\pages\\developers\\delete.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CAC378B3-E587-25FE-4D04-F3F78F6AB66D}|VideoGameManager.csproj|solutionrelative:pages\\developers\\delete.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,73 +22,28 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Developer.cs",
-              "DocumentMoniker": "C:\\Users\\isard\\Desktop\\myRepo\\VideogameManager-amp\\Models\\Developer.cs",
-              "RelativeDocumentMoniker": "Models\\Developer.cs",
-              "ToolTip": "C:\\Users\\isard\\Desktop\\myRepo\\VideogameManager-amp\\Models\\Developer.cs",
-              "RelativeToolTip": "Models\\Developer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAhAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Delete.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\gasai\\Desktop\\DAMv\\Programaci\u00F3\\VideogameManager-amp\\Pages\\Developers\\Delete.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Developers\\Delete.cshtml.cs",
+              "ToolTip": "C:\\Users\\gasai\\Desktop\\DAMv\\Programaci\u00F3\\VideogameManager-amp\\Pages\\Developers\\Delete.cshtml.cs",
+              "RelativeToolTip": "Pages\\Developers\\Delete.cshtml.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAADwvy8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T11:34:29.426Z",
+              "WhenOpened": "2026-05-11T15:23:25.431Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\isard\\Desktop\\myRepo\\VideogameManager-amp\\Pages\\Developers\\Index.cshtml",
-              "RelativeDocumentMoniker": "Pages\\Developers\\Index.cshtml",
-              "ToolTip": "C:\\Users\\isard\\Desktop\\myRepo\\VideogameManager-amp\\Pages\\Developers\\Index.cshtml",
-              "RelativeToolTip": "Pages\\Developers\\Index.cshtml",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAACQAAAAdAAAAAAAAAA==",
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\gasai\\Desktop\\DAMv\\Programaci\u00F3\\VideogameManager-amp\\Pages\\Developers\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Developers\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\gasai\\Desktop\\DAMv\\Programaci\u00F3\\VideogameManager-amp\\Pages\\Developers\\Delete.cshtml",
+              "RelativeToolTip": "Pages\\Developers\\Delete.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABgAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-11T11:28:21.942Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Index.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\isard\\Desktop\\myRepo\\VideogameManager-amp\\Pages\\Developers\\Index.cshtml.cs",
-              "RelativeDocumentMoniker": "Pages\\Developers\\Index.cshtml.cs",
-              "ToolTip": "C:\\Users\\isard\\Desktop\\myRepo\\VideogameManager-amp\\Pages\\Developers\\Index.cshtml.cs",
-              "RelativeToolTip": "Pages\\Developers\\Index.cshtml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T11:36:56.443Z",
-              "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\isard\\Desktop\\myRepo\\VideogameManager-amp\\Pages\\Games\\Index.cshtml",
-              "RelativeDocumentMoniker": "Pages\\Games\\Index.cshtml",
-              "ToolTip": "C:\\Users\\isard\\Desktop\\myRepo\\VideogameManager-amp\\Pages\\Games\\Index.cshtml",
-              "RelativeToolTip": "Pages\\Games\\Index.cshtml",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAYwB4AAAB/AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-11T11:30:39.145Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Index.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\isard\\Desktop\\myRepo\\VideogameManager-amp\\Pages\\Games\\Index.cshtml.cs",
-              "RelativeDocumentMoniker": "Pages\\Games\\Index.cshtml.cs",
-              "ToolTip": "C:\\Users\\isard\\Desktop\\myRepo\\VideogameManager-amp\\Pages\\Games\\Index.cshtml.cs",
-              "RelativeToolTip": "Pages\\Games\\Index.cshtml.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAwwBUAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T11:23:09.051Z",
+              "WhenOpened": "2026-05-11T15:23:03.975Z",
               "EditorCaption": ""
             }
           ]

@@ -15,7 +15,6 @@ namespace VideoGameManager.Models
         [Range(1800, 2030)]
         public int FoundedYear { get; set; }
 
-        // Propietat de navegació: un developer té molts jocs
         public ICollection<Game> Games { get; set; } = new List<Game>();
     }
 }

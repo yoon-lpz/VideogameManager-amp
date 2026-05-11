@@ -18,8 +18,6 @@ namespace VideoGameManager.Pages.Games
 
         public DeleteModel(GameStoreContext context) => _context = context;
 
-        public const string ErrorMessage = "No";
-
         public async Task<IActionResult> OnGetAsync(int id)
         {
             Game = await _context.Games
