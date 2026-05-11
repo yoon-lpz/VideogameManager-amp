@@ -1,0 +1,44 @@
+﻿@page
+@model VideoGameManager.Pages.Developers.IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+@*Nombre país año y juegos*@
+
+<div style="font-family: 'Segoe UI'; margin: 20px">
+
+    <div style="box-shadow: 0 4px 15px #0000000D; border-radius: 8px; overflow: scroll; border: 1px solid #e0e0e0;">
+        <table style="border-collapse: collapse; width: 100%; background-color: white;">
+            <thead>
+                <tr style="background-color: #88d8c0; color: white;">
+                    <th style="padding: 18px 20px; text-align: left; font-weight: 600; font-size: 13.6px; letter-spacing: 1px;">Name</th>
+                    <th style="padding: 18px 20px; text-align: left; font-weight: 600; font-size: 13.6px; letter-spacing: 1px;">Country</th>
+                    <th style="padding: 18px 20px; text-align: left; font-weight: 600; font-size: 13.6px; letter-spacing: 1px;">Founded year</th>
+                    <th style="padding: 18px 20px; text-align: left; font-weight: 600; font-size: 13.6px; letter-spacing: 1px;">Number of games</th>
+                    <th style="padding: 18px 20px; width: 120px;"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var developer in Model.Developers)
+                {
+                    var rowColor = (Model.Developers.IndexOf(developer) % 2 == 0) ? "#ffffff" : "#f8fdfb";
+
+                    <tr style="background-color: @rowColor; border-bottom: 1px solid #eee; transition: background-color 0.3s;">
+                        <td style="padding: 15px 20px; font-weight: 500; color: #333;">@developer.Name</td>
+                        <td style="padding: 15px 20px; font-weight: 500; color: #333;">@developer.Country</td>
+                        <td style="padding: 15px 20px; font-weight: 500; color: #333;">@developer.FoundedYear</td>
+                        <td style="padding: 15px 20px; font-weight: 500; color: #333;">@developer.Games.Count</td>
+                        <td style="padding: 15px 20px; text-align: right;">
+                            <a asp-page="./Details" asp-route-id="@developer.Id"
+                                   style="text-decoration: none; color: #88d8c0; border: 1px solid #88d8c0; padding: 6px 12px; border-radius: 4px; font-size: 12.8px; font-weight: bold; display: inline-block;">
+                                DETAILS
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+

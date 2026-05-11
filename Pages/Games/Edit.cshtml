@@ -15,7 +15,6 @@
     <form method="post" style="padding: 25px;">
         <div asp-validation-summary="ModelOnly" style="color: #e74c3c; margin-bottom: 15px; font-size: 15px;"></div>
 
-        @* Importante: Mantener el ID oculto para que EF sepa qué registro actualizar *@
         <input type="hidden" asp-for="Game.Id" />
 
         <div style="margin-bottom: 20px;">
@@ -37,7 +36,6 @@
             </div>
         </div>
 
-        @* Nuevo bloque para el Developer (Requerido para la base de datos) *@
         <div style="margin-bottom: 20px;">
             <label asp-for="Game.DeveloperId" style="display: block; font-weight: bold; color: #88d8c0; margin-bottom: 8px; font-size: 15px;">Developer</label>
             <select asp-for="Game.DeveloperId" asp-items="Model.DeveloperList" style="width: 100%; padding: 10px; border: 1px solid #eee; border-radius: 4px; box-sizing: border-box; font-size: 15px; outline-color: #88d8c0; background-color: white;">
